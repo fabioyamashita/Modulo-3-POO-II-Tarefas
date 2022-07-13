@@ -7,33 +7,33 @@ using Sharprompt;
 
 namespace LetsSpeak
 {
-    public class MenuItem
+    public class MenuItem : IMenuItem
     {
-        public MenuType Type { get; }
-        private static MenuItem _root;
-        private MenuItem parent = null;
-        private string title;
-        private List<MenuItem> items;
-        private Action action;
+        internal MenuType Type { get; }
+        internal static MenuItem _root;
+        public MenuItem Parent { get; set; } = null;
+        public string Title { get; }
+        public List<MenuItem> Items { get; }
+        public Action Action { get; }
 
         public MenuItem(string title)
         {
-            this.title = title;
-            items = new List<MenuItem>();
+            this.Title = title;
+            Items = new List<MenuItem>();
             if (_root == null) _root = this;
             Type = MenuType.Submenu;
         }
 
         public MenuItem(string title, Action action) : this(title)
         {
-            this.action = action;
+            this.Action = action;
             Type = MenuType.Command;
         }
 
         public void Add(MenuItem menuItem)
         {
-            menuItem.parent = this;
-            items.Add(menuItem);
+            menuItem.Parent = this;
+            Items.Add(menuItem);
         }
 
         public void Execute()
@@ -41,7 +41,7 @@ namespace LetsSpeak
             Console.Clear();
             Console.ResetColor();
 
-            var menuItems = Prompt.Select(title, items);
+            var menuItems = Prompt.Select(Title, Items);
 
             switch (menuItems.Type)
             {
@@ -50,7 +50,7 @@ namespace LetsSpeak
                     break;
 
                 case MenuType.Command:
-                    menuItems.action();
+                    menuItems.Action();
                     Console.ReadKey(true);
                     break;
 
@@ -58,12 +58,12 @@ namespace LetsSpeak
                     break;
             }
 
-            menuItems.parent.Execute();
+            menuItems.Parent.Execute();
         }
 
         public override string ToString()
         {
-            return title;
+            return Title;
         }
 
     }

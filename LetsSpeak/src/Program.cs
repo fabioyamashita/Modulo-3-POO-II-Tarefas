@@ -6,14 +6,17 @@ namespace LetsSpeak
     {
         static void Main(string[] args)
         {
+            IDictionary dict = new EnglishDictionary();
+            INewWordRegister register = new NewWordRegister(dict);
+
+
             PromptConfig.DefaultConfig();
             Console.Title = "Let's Speak";
 
-            EnglishDictionary dict = new EnglishDictionary();
 
-            var mainMenu = new MenuItem("Main Menu");
-            mainMenu.Add(new MenuItem("Register new word", dict.AddWordToDatabase));
-            mainMenu.Add(new MenuItem("Search word meaning", dict.SearchWord));
+            IMenuItem mainMenu = new MenuItem("Main Menu");
+            mainMenu.Add(new MenuItem("Register new word", register.AddWordToDatabase));
+            mainMenu.Add(new MenuItem("Search word meaning", WordSearcher.Search));
             mainMenu.Add(new MenuItem("EXIT", () => Environment.Exit(0)));
 
             mainMenu.Execute();

@@ -11,7 +11,7 @@ namespace LetsSpeak
     {
         private static readonly string _rootDirectory = AppDomain.CurrentDomain.BaseDirectory;
         private static readonly string _englishDictionaryDb = Path.Combine(_rootDirectory, "eng-dictionary.xml");
-        
+
         public static List<EnglishDictionary> EnglishDictionary = new List<EnglishDictionary>();
 
         static Database()
@@ -25,16 +25,17 @@ namespace LetsSpeak
                 Save();
 
             Load();
+
         }
-        
+
         public static void Save()
         {
             Console.WriteLine("Salvando...");
 
-            XmlSerializer dictionarySerializer = new XmlSerializer(typeof(List<EnglishDictionary>));
+            XmlSerializer employeeSerializer = new XmlSerializer(typeof(List<EnglishDictionary>));
             using (TextWriter writer = new StreamWriter(_englishDictionaryDb))
             {
-                dictionarySerializer.Serialize(writer, EnglishDictionary);
+                employeeSerializer.Serialize(writer, EnglishDictionary);
             }
 
             Console.WriteLine("Salvo.");
@@ -42,11 +43,12 @@ namespace LetsSpeak
 
         public static void Load()
         {
-            XmlSerializer dictionarySerializer = new XmlSerializer(typeof(List<EnglishDictionary>));
+
+            XmlSerializer employeeSerializer = new XmlSerializer(typeof(List<EnglishDictionary>));
             using (TextReader reader = new StreamReader(_englishDictionaryDb))
             {
-                var dict = dictionarySerializer.Deserialize(reader) as List<EnglishDictionary>;
-                EnglishDictionary = dict ?? new List<EnglishDictionary>();
+                var employees = employeeSerializer.Deserialize(reader) as List<EnglishDictionary>;
+                EnglishDictionary = employees ?? new List<EnglishDictionary>();
             }
         }
     }
