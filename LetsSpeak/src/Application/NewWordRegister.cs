@@ -26,7 +26,7 @@ namespace LetsSpeak
                 return;
 
             Database.EnglishDictionary.Add((EnglishDictionary)_englishDictionary);
-            Database.Save();
+            DatabaseSaver.Save(Database.EnglishDictionary, Database._englishDictionaryDb);
 
             Console.Clear();
             Console.WriteLine($"\nA palavra '{_englishDictionary.Word}' foi adicionada com sucesso!");

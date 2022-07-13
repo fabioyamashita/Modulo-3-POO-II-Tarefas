@@ -1,4 +1,5 @@
 ﻿using Sharprompt;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace LetsSpeak
 {
@@ -9,15 +10,17 @@ namespace LetsSpeak
             IDictionary dict = new EnglishDictionary();
             INewWordRegister register = new NewWordRegister(dict);
 
+            //var serviceColletion = new ServiceCollection()
+            //    .AddScoped<IDictionary, EnglishDictionary>()
+            //    .AddScoped<INewWordRegister, NewWordRegister>();
 
             PromptConfig.DefaultConfig();
             Console.Title = "Let's Speak";
 
-
             IMenuItem mainMenu = new MenuItem("Main Menu");
-            mainMenu.Add(new MenuItem("Register new word", register.AddWordToDatabase));
-            mainMenu.Add(new MenuItem("Search word meaning", WordSearcher.Search));
-            mainMenu.Add(new MenuItem("EXIT", () => Environment.Exit(0)));
+            mainMenu.Add(new MenuItem("Adicionar Termo", register.AddWordToDatabase));
+            mainMenu.Add(new MenuItem("Procurar Significados", WordSearcher.Search));
+            mainMenu.Add(new MenuItem("SAIR", () => Environment.Exit(0)));
 
             mainMenu.Execute();
             

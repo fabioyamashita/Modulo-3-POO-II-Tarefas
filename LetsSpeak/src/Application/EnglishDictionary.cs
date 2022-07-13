@@ -9,9 +9,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LetsSpeak
 {
-    public class EnglishDictionary : WordSearcher, IDictionary
+    public class EnglishDictionary : IDictionary
     {
-        //private static Dictionary<string, string> dictionary = new Dictionary<string, string>();
         public string Word { get; set; }
         public string WordMeaning { get; set; }
     }

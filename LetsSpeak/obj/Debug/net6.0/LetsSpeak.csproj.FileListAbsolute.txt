@@ -17,3 +17,5 @@ C:\Users\yamas\Documents\C#\Curso-Completo-Lets-Code-Safra\Modulo-3-POO-II-Taref
 C:\Users\yamas\Documents\C#\Curso-Completo-Lets-Code-Safra\Modulo-3-POO-II-Tarefas\LetsSpeak\bin\Debug\net6.0\Sharprompt.dll
 C:\Users\yamas\Documents\C#\Curso-Completo-Lets-Code-Safra\Modulo-3-POO-II-Tarefas\LetsSpeak\bin\Debug\net6.0\ja\Sharprompt.resources.dll
 C:\Users\yamas\Documents\C#\Curso-Completo-Lets-Code-Safra\Modulo-3-POO-II-Tarefas\LetsSpeak\obj\Debug\net6.0\LetsSpeak.csproj.CopyComplete
+C:\Users\yamas\Documents\C#\Curso-Completo-Lets-Code-Safra\Modulo-3-POO-II-Tarefas\LetsSpeak\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\yamas\Documents\C#\Curso-Completo-Lets-Code-Safra\Modulo-3-POO-II-Tarefas\LetsSpeak\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

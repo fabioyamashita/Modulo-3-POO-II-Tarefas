@@ -4,14 +4,13 @@ namespace LetsSpeak
 {
     public static class DatabaseLoader
     {
-
-        public static void Load(List<EnglishDictionary> dictionary, string englishDictionaryDb)
+        public static void Load(string dictionaryDb)
         {
             XmlSerializer dictionarySerializer = new XmlSerializer(typeof(List<EnglishDictionary>));
-            using (TextReader reader = new StreamReader(englishDictionaryDb))
+            using (TextReader reader = new StreamReader(dictionaryDb))
             {
                 var dict = dictionarySerializer.Deserialize(reader) as List<EnglishDictionary>;
-                dictionary = dict ?? new List<EnglishDictionary>();
+                Database.EnglishDictionary = dict ?? new List<EnglishDictionary>();
             }
         }
     }

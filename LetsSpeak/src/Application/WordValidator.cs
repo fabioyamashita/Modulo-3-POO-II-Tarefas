@@ -1,6 +1,6 @@
 ﻿namespace LetsSpeak
 {
-    public class WordSearchValidator
+    public class WordValidator
     {
         public static bool IsValidWord(string word)
         {
