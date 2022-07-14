@@ -16,6 +16,10 @@ A aplicação deve armazenar termos e seus significados. Os termos podem ser com
   - *Por exemplo, ao buscar por pea, o sistema deve retornar termos como speak, pear, peacock, spears, etc.*
 - A aplicação deve salvar os dados em um arquivo no disco de forma que, ao ser iniciada, todos os termos salvos sejam carregados.
 
+### My Solution
+
+https://user-images.githubusercontent.com/98363297/179053099-bf1664f6-3f01-449d-b8f8-d3579329dd8a.mp4
+
 ## Tarefa de Reflection para entrega até 15/07/2022
 
 ### Enunciado
