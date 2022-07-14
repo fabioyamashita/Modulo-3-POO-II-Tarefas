@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Fs0QykJmsbY5raouOUPZGVyYK7ELPivslZsaaR2DIXAgfhvRZEFXvLZEWHBuQHinyMqXKUM9IGW2rKsYJKKqoA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yamas\\Documents\\C#\\Curso-Completo-Lets-Code-Safra\\Modulo-3-POO-II-Tarefas\\LetsSpeak\\LetsSpeak.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yamas\\.nuget\\packages\\betterconsoletables\\1.1.3\\betterconsoletables.1.1.3.nupkg.sha512",
+    "C:\\Users\\yamas\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\yamas\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\yamas\\.nuget\\packages\\sharprompt\\2.4.2\\sharprompt.2.4.2.nupkg.sha512",
+    "C:\\Users\\yamas\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\yamas\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
