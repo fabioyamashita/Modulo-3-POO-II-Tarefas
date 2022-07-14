@@ -6,7 +6,7 @@ namespace LetsSpeak
     {
         public static void Save(List<EnglishDictionary> dictionary, string dictionaryDb)
         {
-            Console.WriteLine("Salvando...");
+            Console.WriteLine("Saving...");
 
             XmlSerializer dictionarySerializer = new XmlSerializer(typeof(List<EnglishDictionary>));
             using (TextWriter writer = new StreamWriter(dictionaryDb))
@@ -14,7 +14,7 @@ namespace LetsSpeak
                 dictionarySerializer.Serialize(writer, dictionary);
             }
 
-            Console.WriteLine("Salvo.");
+            Console.WriteLine("Saved.");
         }
     }
 }

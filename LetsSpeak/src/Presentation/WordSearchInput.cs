@@ -9,13 +9,13 @@ namespace LetsSpeak
             string wordSearch;
             do
             {
-                wordSearch = Prompt.Input<string>("O que você está procurando?");
+                wordSearch = Prompt.Input<string>("What are you looking for?");
 
-                if (WordValidator.IsValidWord(wordSearch))
+                if (WordValidator.IsValidWordInput(wordSearch))
                     break;
 
                 Console.Clear();
-                Console.WriteLine("Digite uma palavra válida!");
+                Console.WriteLine("Please, write a valid word!");
 
             } while (true);
 

@@ -14,7 +14,7 @@ namespace LetsSpeak
 
             foreach (var dict in Database.EnglishDictionary)
             {
-                if (dict.Word.Contains(wordSearch.Trim().ToLower()))
+                if (dict.Word.Contains(wordSearch.Trim(),StringComparison.CurrentCultureIgnoreCase))
                 {
                     wordFound.Add(dict.Word);
                     wordFoundMeaning.Add(dict.WordMeaning);
@@ -23,11 +23,11 @@ namespace LetsSpeak
 
             if (wordFound.Count == 0)
             {
-                Console.WriteLine("Nenhum termo encontrado!");
+                Console.WriteLine("No words found!");
                 return;
             }
 
-            Console.WriteLine($"\nResultado da busca pela palavra '{wordSearch.ToLower()}'");
+            Console.WriteLine($"\nSearch results for '{wordSearch}'");
 
             SearchResultsTableGenerator.Show(wordFound, wordFoundMeaning);
         }

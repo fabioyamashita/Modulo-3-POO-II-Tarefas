@@ -2,9 +2,9 @@
 {
     public class WordValidator
     {
-        public static bool IsValidWord(string word)
+        public static bool IsValidWordInput(string word)
         {
-            if (word.Any(c => !char.IsLetter(c)) || String.IsNullOrEmpty(word))
+            if (String.IsNullOrEmpty(word) || word.Any(c => !char.IsLetter(c)))
                 return false;
 
             return true;
