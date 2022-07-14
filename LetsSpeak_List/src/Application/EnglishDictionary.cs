@@ -22,6 +22,15 @@ namespace LetsSpeak
             Console.Clear();
             var newWord = Prompt.Bind<EnglishDictionary>();
 
+            foreach (var dict in Database.EnglishDictionary)
+            {
+                if (string.Equals(dict.Word, newWord.Word, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    Console.WriteLine("Word already exists!");
+                    return;
+                }
+            }
+
             var confirmWord = Prompt.Confirm("Confirm?");
 
             if (!confirmWord)
