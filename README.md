@@ -18,7 +18,7 @@ A aplicação deve armazenar termos e seus significados. Os termos podem ser com
 
 ### My Solution
 
-https://user-images.githubusercontent.com/98363297/179053099-bf1664f6-3f01-449d-b8f8-d3579329dd8a.mp4
+https://user-images.githubusercontent.com/98363297/179053539-e933e76a-a2fd-4f2a-abab-c15d1ba5e821.mp4
 
 ## Tarefa de Reflection para entrega até 15/07/2022
 
